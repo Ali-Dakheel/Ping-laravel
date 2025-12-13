@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
+use App\Http\Controllers\V1\Credentials;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Credentials;
 
 Route::get('/', Credentials\IndexController::class)->name('index');
 Route::post('/', Credentials\StoreController::class)->name('store');

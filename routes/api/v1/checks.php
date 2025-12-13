@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
+use App\Http\Controllers\V1\Checks;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Checks;
 
 Route::get('/', Checks\IndexController::class)->name('index');
 Route::post('/', Checks\StoreController::class)->name('store');

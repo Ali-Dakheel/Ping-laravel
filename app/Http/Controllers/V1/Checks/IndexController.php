@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Checks;
+namespace app\Http\Controllers\V1\Checks;
 
 class IndexController
 {

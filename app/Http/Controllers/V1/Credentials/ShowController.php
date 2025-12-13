@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Services;
+namespace app\Http\Controllers\V1\Credentials;
 
 final class ShowController
 {

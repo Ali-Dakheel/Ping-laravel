@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Credentials;
+namespace app\Http\Controllers\V1\Checks;
 
 final class StoreController
 {
