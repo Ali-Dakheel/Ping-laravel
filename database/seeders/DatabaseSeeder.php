@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Check;
 use App\Models\Service;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -19,6 +20,11 @@ class DatabaseSeeder extends Seeder
             'email' => 'ali.dakheel@raincode.tech',
         ]);
 
-        Service::factory()->for($user)->count(1000)->create();
+        $service = Service::factory()->for($user)->create([
+            'name' => 'Trebelle api',
+            'url' => 'http://trebelle-api.com',
+        ]);
+
+        Check::factory()->for($service)->count(10)->create();
     }
 }
