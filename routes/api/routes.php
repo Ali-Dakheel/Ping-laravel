@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 Route::prefix('v1')->as('v1:')->group(static function (): void {
     Route::get('/', fn() => response()->json([request()->route()]))->middleware(['sunset:'.now()->subDays(3)]);
 
-    Route::middleware(['auth:sanctum', 'throttle:api'])->group(static function (): void {
+    Route::middleware(['throttle:api'])->group(static function (): void {
         Route::get('user', static function (Request $request) {
             return $request->user()->name('user');
         });
